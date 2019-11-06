@@ -27,8 +27,11 @@ DEBUG = True
 # When DEBUG is True and ALLOWED_HOSTS is empty, 
 # the host is validated against ['localhost', '127.0.0.1', '[::1]']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] # '*' to allow any host on the server
 
+# To make Django server accessible in LAN use: python manage.py runserver 0.0.0.0:8000
+# Note that the default IP address, 127.0.0.1, is not accessible from other machines on your network. 
+# To make your development server viewable to other machines on the network, use its own IP address (e.g. 192.168.2.1) or 0.0.0.0.
 
 # Application definition
 

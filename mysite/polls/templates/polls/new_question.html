@@ -1,0 +1,6 @@
+<form action="{% url 'polls:create_question' %}" method="post">
+    {% csrf_token %} {# Cross Site Request Forgeries #}
+    <label> Question text: </label>
+    <input type="text" name="q_text" value="">
+    <input type="submit" value="Create">
+</form>
